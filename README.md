@@ -5,7 +5,9 @@ Author: James Powenski
 
 This python application is a local web application that uses parquet files from the NY Taxi service, https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-My approach was initially to find the 90 precentile of the distance traveled for a specific month but I went a little farther by curiousity to see how Uber influenced the data. Uber started in May 2011.
+My approach was initially to find the 90 precentile of the distance traveled for a specific month but I went a little farther by curiousity to see how Uber influenced the data therefore the application can compare one month to another month. Uber started in May 2011.
+
+The default distance from NY Taxi is in miles.
 
 I used ChatGPT which suggested to use 'streamlit' for the UI and python for the application. The requirement was to use libraries only and not a 3rd party solution like DuckDB which is a parquet file database with SQL.
 
