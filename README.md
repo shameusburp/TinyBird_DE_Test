@@ -9,6 +9,19 @@ My approach was initially to find the 90 precentile of the distance traveled for
 
 The default distance from NY Taxi is in miles.
 
+Pandas a great tool to use for parquet files.
+
+import pandas as pd
+df = pd.read_parquet('yellow_tripdata_2026-01.parquet')
+
+//This will create a dataframe to query against.
+
+df['trip_distance'].quantile(0.9)
+
+Or using DuckDb
+A simple query can accomplish the task as SELECT quantile(trip_distance, 0.9) FROM read_parquet('yellow_tripdata_2026-01.parquet');
+
+Also
 I used ChatGPT which suggested to use 'streamlit' for the UI and python for the application. The requirement was to use libraries only and not a 3rd party solution like DuckDB which is a parquet file database with SQL.
 
 # 🚕 Taxi Distance Percentile Comparator
